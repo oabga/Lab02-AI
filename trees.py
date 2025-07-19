@@ -22,3 +22,9 @@ def expand(problem, node):
         cost = node.path_cost + problem.action_cost(s, action, s1)
         yield Node(s1, node, action, cost)
 
+
+def path_states(node):
+    if node in (None, failure):
+        return []
+    
+    return path_states(node.parent) + [node.state]

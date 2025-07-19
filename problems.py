@@ -30,3 +30,6 @@ class RouteProblem(Problem):
     
     def action_cost(self, s, action, s1): # s = Z, s1 = A
         return self.map.distances[s, s1]
+    
+
+    
